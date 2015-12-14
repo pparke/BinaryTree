@@ -81,6 +81,8 @@ export default class Game extends Phaser.State {
     // input
     this.input.onDown.add(this.begin, this);
 
+    this.input.keyboard.addKeyCapture(Phaser.Keyboard.SPACEBAR);
+
     this.input.keyboard.onDownCallback = this.keydown.bind(this);
     this.input.keyboard.onUpCallback = this.keyup.bind(this);
 
