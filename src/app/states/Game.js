@@ -40,7 +40,7 @@ export default class Game extends Phaser.State {
     this.tree         = new Tree(this.game, this.game.width/2, this.game.height - 10);
 
     if (this.rule) {
-      this.lsystem.setRule(this.rule);
+      this.lsystem.setRule('0', this.rule);
     }
     // rule display
     this.ruleDisplay.addRule(this.lsystem.rules['0'].split(''));
@@ -205,7 +205,7 @@ export default class Game extends Phaser.State {
   }
 
   restart () {
-    this.game.state.start('Game', true, false, this.lsystem.rules[0]);
+    this.game.state.start('Game', true, false, this.lsystem.rules['0']);
   }
 
 }

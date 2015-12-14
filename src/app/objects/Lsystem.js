@@ -13,7 +13,7 @@ class Lsystem {
     this.axiom = '0';
     this.nextAxiom = this.axiom.split('');
     this.rules = {
-      '0': '1-[[0]+0]+1[+10]-0',
+      '0': '1-[[0]+0]+1[+10]-0        ',
       '1': '11'
     };
 
